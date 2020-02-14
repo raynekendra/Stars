@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Star View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="StarViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ped-nl-uqr">
+                                <rect key="frame" x="0.0" y="44" width="414" height="175"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="G8D-vL-LcJ">
+                                        <rect key="frame" x="15" y="30" width="384" height="137"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Star Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XJR-GX-w5F">
+                                                <rect key="frame" x="0.0" y="0.0" width="384" height="32.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Distance in Lightyears" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nca-wt-MHy">
+                                                <rect key="frame" x="0.0" y="52.5" width="384" height="32"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="R45-re-ObR">
+                                                <rect key="frame" x="0.0" y="104.5" width="384" height="32.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SrM-eF-mPq">
+                                                        <rect key="frame" x="0.0" y="0.0" width="332" height="32.5"/>
+                                                        <state key="normal" title="Print Stars"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qcR-2v-uPS">
+                                                        <rect key="frame" x="338" y="0.0" width="46" height="32.5"/>
+                                                        <state key="normal" title="Create"/>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="G8D-vL-LcJ" firstAttribute="top" secondItem="Ped-nl-uqr" secondAttribute="top" constant="30" id="OXK-Sg-Zwk"/>
+                                    <constraint firstItem="G8D-vL-LcJ" firstAttribute="leading" secondItem="Ped-nl-uqr" secondAttribute="leading" constant="15" id="fKp-AL-rwa"/>
+                                    <constraint firstAttribute="bottom" secondItem="G8D-vL-LcJ" secondAttribute="bottom" constant="8" id="raw-1c-5u1"/>
+                                    <constraint firstAttribute="trailing" secondItem="G8D-vL-LcJ" secondAttribute="trailing" constant="15" id="uQR-5i-ijC"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Wfl-OX-uEn">
+                                <rect key="frame" x="0.0" y="323" width="414" height="539"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="539" id="0Kv-F8-XLX"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Star Cell" id="ylw-QN-d9U">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ylw-QN-d9U" id="BZJ-RC-kFW">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="fyr-EM-Emf">
+                                                    <rect key="frame" x="16" y="4" width="382" height="36"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Star Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ABj-ef-Niy">
+                                                            <rect key="frame" x="0.0" y="0.0" width="81" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Distance in Lightyears" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uB5-DH-aDG">
+                                                            <rect key="frame" x="0.0" y="21.5" width="125.5" height="14.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="fyr-EM-Emf" firstAttribute="leading" secondItem="BZJ-RC-kFW" secondAttribute="leading" constant="16" id="a2H-ha-BNO"/>
+                                                <constraint firstAttribute="trailing" secondItem="fyr-EM-Emf" secondAttribute="trailing" constant="16" id="hRW-Ue-9SD"/>
+                                                <constraint firstItem="fyr-EM-Emf" firstAttribute="centerY" secondItem="BZJ-RC-kFW" secondAttribute="centerY" id="l3Q-Rh-RnR"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Ped-nl-uqr" firstAttribute="leading" secondItem="Wfl-OX-uEn" secondAttribute="leading" id="3Vq-wD-tHA"/>
+                            <constraint firstAttribute="bottom" secondItem="Ped-nl-uqr" secondAttribute="bottom" constant="677" id="EZV-Q0-CzV"/>
+                            <constraint firstItem="Wfl-OX-uEn" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="SfN-ee-Yiy"/>
+                            <constraint firstItem="Ped-nl-uqr" firstAttribute="trailing" secondItem="Wfl-OX-uEn" secondAttribute="trailing" id="caW-lI-5yr"/>
+                            <constraint firstItem="Ped-nl-uqr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="osD-Ze-9S0"/>
+                            <constraint firstItem="Ped-nl-uqr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="qjX-h1-PH1"/>
+                            <constraint firstItem="Ped-nl-uqr" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="vDV-nh-cOF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="99.776785714285708"/>
+        </scene>
+    </scenes>
+</document>
